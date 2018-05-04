@@ -6,7 +6,7 @@ pipeline {
         docker {
             image 'centos'
             args '-u root'
-            args '-p 8000:8080'
+            args '-p 8888:8080'
         }
     }
 
@@ -20,8 +20,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'systemctl enable tomcat; /usr/local/tomcat/bin/catalina.sh run'
-                sh 'curl http://localhost:8080'
+                sh 'systemctl enable tomcat; /usr/libexec/tomcat/server start'
+                
             }
         }
     }
