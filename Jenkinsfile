@@ -6,7 +6,7 @@ pipeline {
         docker {
             image 'centos'
             args '-u root'
-            args '-p 8080:8080'
+            args '-p 8000:8080'
         }
     }
 
