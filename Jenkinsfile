@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'yum  install-y tomcat '
+                sh 'yum  install -y tomcat '
             }
         }
         stage('Test') {
