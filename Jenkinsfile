@@ -3,6 +3,7 @@
 pipeline {
 
     agent {
+        checkout scm
         docker {
             image 'centos'
             args '-u centos'
