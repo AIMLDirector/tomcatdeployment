@@ -3,7 +3,7 @@
 pipeline {
 
     agent {
-        checkout scm
+      
         docker {
             image 'centos'
             args '-u centos'
@@ -14,6 +14,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                checkout scm
                 echo 'Building...'
                 sh 'yum  install -y tomcat '
             }
