@@ -5,7 +5,7 @@ pipeline {
     agent {
         docker {
             image 'centos'
-            args '-u root'
+            args '-u centos'
             args '-p 8888:8080'
         }
     }
