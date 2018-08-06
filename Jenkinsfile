@@ -16,7 +16,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Building...'
-                sh 'df -h'
+                sh 'yum repolist'
             }
         }
         stage('Test') {
