@@ -16,7 +16,7 @@ pipeline {
             steps {
                 checkout scm
                 echo 'Building...'
-                sh 'yum  install -y tomcat '
+                sh 'df -h'
             }
         }
         stage('Test') {
