@@ -22,6 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
+                sh 'yum install -y tomcat'
                 sh 'systemctl enable tomcat; /usr/libexec/tomcat/server start &'
                 
             }
